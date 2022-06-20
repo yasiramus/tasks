@@ -21,7 +21,7 @@ import { useState } from "react";
 
     return (
       
-        <div className="mt-4 mb-6 p-4 rounded-lg text-center mx-auto max-w-2xl md:flex" id="customshadow">
+        <div className="mt-4 mb-6 p-4 rounded-lg text-center mx-auto max-w-2xl sm:flex" id="customshadow">
             
 
             <label className="font-bold space-x-2.5 sm:text-sm lg:text-base">New Task</label>
