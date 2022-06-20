@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import "tailwindcss/base";
+import "./custom-base-styles.css";
+
+import "tailwindcss/components";
+import "./custom-components.css";
+
+import "tailwindcss/utilities";
+import "./custom-utilities.css";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
