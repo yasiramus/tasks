@@ -21,16 +21,18 @@ import { useState } from "react";
 
     return (
       
-        <div className="mt-4 mb-6 p-4 rounded-lg text-center mx-auto sm:mx-auto lg:w-2/5 lg:block sm:w-11/12" id="customshadow">
+        <div className="mt-4 mb-6 sm:p-3 p-4 rounded-lg text-center mx-auto sm:mx-auto lg:w-2/5 lg:block sm:w-11/12" id="customshadow">
             
 
-            <label className="font-bold space-x-2.5 sm:text-sm lg:text-base">New Task</label>
+            {/* <label className="font-bold space-x-2.5 sm:text-sm lg:text-base">New Task</label> */}
+            <label className="font-bold sm:text-sm lg:text-base">New Task</label>
 
-            <input type="text" className="sm:w-40 lg:w-2/4 text-base font-medium p-2 rounded-lg my-0 mx-2.5 outline-none  border-solid border-b-2 border-#ddd-100" autoComplete="off"
+
+            <input type="text" className="sm:w-6/12 lg:w-2/4 text-base font-medium p-2 rounded-lg my-0 mx-2.5 outline-none  border-solid border-b-2 border-#ddd-100" autoComplete="off"
                 
             value={inputValueToLowerCase} onChange={e => setInputValues(e.target.value)} />
         
-            <button className="sm:text-sm lg:text-base bg-pink-700 py-2 px-2.5 text-white rounded-md transition"
+            <button className="sm:text-sm lg:text-base bg-pink-700 p-2 sm:p-1.5 text-white rounded-md"
                 
                 onClick={() => {
 
