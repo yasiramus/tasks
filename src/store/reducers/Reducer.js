@@ -1,8 +1,10 @@
 // importation of action types from the actio folder 
 import { ADD_TO_DO, FETCH_TO_DO, COMPLETE_TODO, DELETE_TODO } from "../actions/Actions";
 
+// importation of action types from the actio folder 
 import { LOAD_TO_DO_REQUEST, LOAD_TO_DO_SUCCESS, LOAD_TO_DO_FAILURE } from "../actions/Actions";
 
+// here the state was an array
 // export const todoReducer = (state = [], action) => {
     
 //     switch (action.type) {
@@ -59,6 +61,7 @@ import { LOAD_TO_DO_REQUEST, LOAD_TO_DO_SUCCESS, LOAD_TO_DO_FAILURE } from "../a
 
 // }
 
+// loader reducer
 // export const todoloader = (loader = false, action) => {
 
 //     switch (action.type) {
@@ -88,14 +91,14 @@ import { LOAD_TO_DO_REQUEST, LOAD_TO_DO_SUCCESS, LOAD_TO_DO_FAILURE } from "../a
 
 // };
 
-// combining the loader reducer into the todo reducer
 
-
+// combining the loader reducer into the todo reducer joining them to be one reducer instead of two reducer
+// now the state here has been change to an object 
 export const loaderAndTodoReducer = (stateObject = { todoData:[], loader:false }, action) => {
     
     switch (action.type) {
 
-        // add todo case 
+        //add todo case 
         case ADD_TO_DO: {
 
             return {
@@ -110,7 +113,6 @@ export const loaderAndTodoReducer = (stateObject = { todoData:[], loader:false }
 
         // fetch todo case 
         case FETCH_TO_DO: {
-            console.log(stateObject,'bb')
 
             return {
 
@@ -123,21 +125,21 @@ export const loaderAndTodoReducer = (stateObject = { todoData:[], loader:false }
             }
 
         }
-            
+         
+        // LOAD_TO_DO_REQUEST case 
         case LOAD_TO_DO_REQUEST: {
-
-            console.log(stateObject,'loading')
             
             return {
 
                 ...stateObject,
 
+                // changing the value from falue to true 
                  loader: true
             }        
         }
 
+        // LOAD_TO_DO_SUCCESS case 
         case LOAD_TO_DO_SUCCESS: {
-            console.log(stateObject, 'success')
 
             return {
 
@@ -150,10 +152,9 @@ export const loaderAndTodoReducer = (stateObject = { todoData:[], loader:false }
 
         }
         
+        //LOAD_TO_DO_FAILURE
         case LOAD_TO_DO_FAILURE: {
 
-            console.log(stateObject, 'failure')
-            
             return {
 
                 ...stateObject,
@@ -194,7 +195,6 @@ export const loaderAndTodoReducer = (stateObject = { todoData:[], loader:false }
         // delete todo case 
         case DELETE_TODO: {
 
-            console.log(stateObject)
             return {
 
                 ...stateObject,
