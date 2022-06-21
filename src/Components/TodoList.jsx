@@ -9,7 +9,7 @@ const TodoList = () => {
     
     return (
 
-        <div  className=" my-0 py-4 px-4 rounded-lg flex justify-between items-center md:mx-auto md:max-w-2xl" id="customshadow">
+        <div  className=" my-0 py-4 px-4 rounded-lg flex justify-between items-center md:mx-auto md:max-w-2xl animate__animated animate__fadeInTopRight" id="customshadow">
 
             <h3 className="font-base font-semibold">wash</h3>
 
