@@ -7,11 +7,11 @@ import { fetchingTodoData } from '../store/thunks/Thunk';
 
 const TodoHome = ({ todoss, loadAllTodos, todoLoaderStarted }) => {
     
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     loadAllTodos()
+        loadAllTodos()
 
-    // }, [loadAllTodos])
+    }, [loadAllTodos])
     
   return (
           
