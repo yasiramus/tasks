@@ -14,9 +14,9 @@ const Modal = ({ open, close, children }) =>  {
         
             <>
                 
-            <div className="fixed top-0 right-0 bottom-0 left-0 z-50" id ="overlay">
+            <div className="fixed top-0 right-0 bottom-0 left-0 z-50 animate__animated animate__zoomIn" id ="overlay">
                 
-                <div className="bg-stone-50 fixed top-1/3 left-1/2 z-50 p-12 -translate-x-2/4 -translate-y-2/4">
+                <div className="bg-stone-50 fixed top-1/2 left-1/2 z-50 p-12 -translate-x-2/4 -translate-y-2/4">
 
                         {/* the children will diplay the data within the todo form component the one within the modal component  */}
                     <p className="text-center pb-2 font-medium text-base capitalize">{children}</p>        
@@ -33,7 +33,7 @@ const Modal = ({ open, close, children }) =>  {
                 
             </>
             
-        );
+        )
         
     }
     

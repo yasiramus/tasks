@@ -17,9 +17,9 @@ const TodoList = ({ tasks, todoDeleted, statusUpdate }) => {
 
             // changing of bankground color and text 
 
-                { backgroundColor: '#af066e', color: '#fff' }
+                { backgroundColor: '#af066e', color: '#fff', transition:".4s ease-in .1s"}
 
-                : { backgroundColor: '#fff', color: '#000' }
+                : { backgroundColor: '#fff', color: '#000', transition:".4s ease-in .1s" }
             }
             >
 
@@ -30,9 +30,9 @@ const TodoList = ({ tasks, todoDeleted, statusUpdate }) => {
                     tasks.isCompleted === true ?
 
                         // adding a line trhrough the text when is completed is true                     
-                        { textDecoration: "line-through" }
+                        { textDecoration: "line-through", transition:".3s ease-in .1s" }
 
-                        : { textDecoration: "none" }
+                        : { textDecoration: "none",  transition:".3s ease-in .1s" }
                     
             }>{tasks.text}</h3>
 
@@ -43,9 +43,9 @@ const TodoList = ({ tasks, todoDeleted, statusUpdate }) => {
                 {
                     tasks.isCompleted === true ? ( 
 
-                    <button className="text-center font-sm text-white rounded-md py-1 px-2 sm:p-1.5 bg-white text-black"  onClick={() => (statusUpdate(tasks.id))}>Done</button>) :
+                    <button className="text-center font-sm text-white font-semibold rounded-md py-1 px-2 sm:p-1.5 bg-white text-black transition"  onClick={() => (statusUpdate(tasks.id))}>Done</button>) :
 
-                    (<button className="text-center font-sm text-white rounded-md py-1 px-2 sm:p-1.5" id="btnbgcolor" onClick={() => (statusUpdate(tasks.id))}>Pending</button>)
+                    (<button className="text-center font-sm  text-white rounded-md py-1 px-2 sm:p-1.5 transition" id="btnbgcolor" onClick={() => (statusUpdate(tasks.id))}>Pending</button>)
                     
                 }
 

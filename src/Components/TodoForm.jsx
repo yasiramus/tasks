@@ -29,13 +29,13 @@ const TodoForm = ({todosAdded, filterText}) => {
         {/* // general container for the todo form  */}
         <div className="mt-4 mb-6 sm:p-3 p-4 rounded-lg text-center mx-auto sm:mx-auto lg:w-2/5 lg:block sm:w-11/12" id="customshadow">
 
-            <label className="font-bold sm:text-sm lg:text-base">New Task</label>
+            <label className="font-bold sm:text-sm lg:text-base ">New Task</label>
 
             <input type="text" className="sm:w-5/12 lg:w-8/12 text-base font-medium p-2 rounded-lg my-0 mx-2.5 outline-none  border-solid border-b-2 border-#ddd-100" autoComplete="off"
                 
             value={inputValueToLowerCase} onChange={e => setInputValues(e.target.value)} />
         
-            <button className="sm:text-sm lg:text-base p-2 sm:p-1.5 text-white rounded-md" id="btnbgcolor"
+            <button className="sm:text-sm lg:text-base p-2 sm:p-1.5 text-white rounded-md transition duration-150 transition " id="btnbgcolor"
                 
                 onClick={() => {
 
