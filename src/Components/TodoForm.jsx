@@ -1,17 +1,15 @@
 // todo form Component
 
 // connect is imported here 
-// import { connect } from "react-redux/es/exports";
+import { connect } from "react-redux";
 
 // use state importation
 import { useState } from "react";
 
 // addingNewTodo is being imported here
-// import { addingNewTodo } from "../store/thunks/Thunk";
+import { addingNewTodo } from "../store/thunks/Thunk";
 
-// const TodoForm = ({todosAdded, filterText}) => {
-    const TodoForm = () => {
-
+const TodoForm = ({todosAdded, filterText}) => {
 
     // setting the state for input values
     const [inputValue, setInputValues] = useState("");
@@ -42,30 +40,30 @@ import { useState } from "react";
                             return null;
 
                         }
-                        // else {
+                        else {
 
-                        //     // comparing the already added text to the one which will be added 
-                        //     // the some is used to prevent duplicate 
-                        //     const dulicateText = filterText.some(todo => todo.text === inputValueToLowerCase);
+                            // comparing the already added text to the one which will be added 
+                            // the some is used to prevent duplicate 
+                            const dulicateText = filterText.some(todo => todo.text === inputValueToLowerCase);
 
-                        //     if (dulicateText) {
+                            if (dulicateText) {
                                 
-                        //         alert(inputValueToLowerCase + ' has been added already')
+                                alert(inputValueToLowerCase + ' has been added already')
                                 
-                        //     } else {
+                            } else {
 
-                        //         todosAdded(inputValueToLowerCase)
+                                todosAdded(inputValueToLowerCase)
 
-                        //         setInputValues("")
+                                setInputValues("")
                                 
-                        //     }
+                            }
 
 
-                        // };
+                        };
                         
-                        // todosAdded(inputValueToLowerCase)
+                        todosAdded(inputValueToLowerCase)
 
-                        //         setInputValues("")
+                                setInputValues("")
 
                     
                 }}> Add Task </button>
@@ -84,17 +82,16 @@ import { useState } from "react";
 
 // });
 
-// const mapStateToProps = state => ({
+const mapStateToProps = state => ({
 
-//     filterText: state.loaderAndTodoReducer.todoData
+    filterText: state.loaderAndTodoReducer.todoData
 
-// });
+});
 
-// const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
 
-//     todosAdded: text => dispatch(addingNewTodo(text))
+    todosAdded: text => dispatch(addingNewTodo(text))
 
-// });
+});
 
-// export default connect(mapStateToProps, mapDispatchToProps)(TodoForm);
-export default TodoForm;
+export default connect(mapStateToProps, mapDispatchToProps)(TodoForm);

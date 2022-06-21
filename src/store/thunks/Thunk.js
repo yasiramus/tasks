@@ -13,7 +13,7 @@ export const addingNewTodo = textt =>
             dispatch(loadTodoRequest())
             const newTodo = await axios.post(`http://localhost:5000/todoApi/`, { text: textt })
         
-            console.log(newTodo)
+            console.log(newTodo,'ne')
             const { data } = newTodo;
 
             dispatch(addTodo(data))
