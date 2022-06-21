@@ -28,7 +28,7 @@ import { useState } from "react";
             <label className="font-bold sm:text-sm lg:text-base">New Task</label>
 
 
-            <input type="text" className="sm:w-6/12 lg:w-2/4 text-base font-medium p-2 rounded-lg my-0 mx-2.5 outline-none  border-solid border-b-2 border-#ddd-100" autoComplete="off"
+            <input type="text" className="sm:w-5/12 lg:w-2/4 text-base font-medium p-2 rounded-lg my-0 mx-2.5 outline-none  border-solid border-b-2 border-#ddd-100" autoComplete="off"
                 
             value={inputValueToLowerCase} onChange={e => setInputValues(e.target.value)} />
         
