@@ -7,7 +7,7 @@ const TodoHome = () => {
           
           <div className="my-4 mx-auto md:mx-auto text-black text-center">
             
-            <h2 className=" text-2xl font-extrabold p-2">The Task Planner</h2>
+            <h2 className="italic text-2xl font-extrabold p-2">The Task Planners</h2>
             
                 <TodoForm /> 
 
